@@ -34,7 +34,7 @@
   /* Typography */
 
   font-family: Helvetica, Arial, sans-serif;
-  color: #FFF;
+  color: #000;
   text-decoration: none;
   text-transform: none;
   text-shadow: 0 1px 0 #000;
@@ -42,7 +42,7 @@
   font-weight: 300;
   /* Background & effects */
 
-  background: #66B2A8;
+  background: #d0e464;
 }
 /* Rounded corners for the first link of the menu/submenus */
 #cssmenu > ul li:first-child > a {

@@ -10,33 +10,28 @@ package com.perpustakaan.javabeans;
  */
 
 public class Kategori {
-    private int id;
-    private String kodeKategori;
-    private String namaKategori;
+    public String id;
+    public String kategori;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getKodeKategori() {
-        return kodeKategori;
+    public String getKategori() {
+        return kategori;
     }
 
-    public void setKodeKategori(String kodeKategori) {
-        this.kodeKategori = kodeKategori;
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
     }
 
-    public String getNamaKategori() {
-        return namaKategori;
-    }
+    
 
-    public void setNamaKategori(String namaKategori) {
-        this.namaKategori = namaKategori;
-    }
+   
 
    
 }

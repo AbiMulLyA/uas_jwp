@@ -1,9 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.perpustakaan.dao;
-
 import com.perpustakaan.javabeans.Kategori;
 import com.perpustakaan.koneksi.Koneksi;
 import java.sql.Connection;
@@ -12,38 +7,31 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public class KategoriDao {
-   
+public class KategoriDao {  
     
-     public void simpan(Kategori kategori) throws SQLException{
-        
+     public void simpan(Kategori kategori) throws SQLException{      
         try{
           Koneksi obj = new Koneksi();
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
-          
-          String query = "insert into kategoritbl"
-                        + "(kode_kategori,nama_kategori) "
-                        + "values('" + kategori.getKodeKategori() + "','" + kategori.getNamaKategori() + "')";
+          String query = "INSERT INTO kategori"
+                        + "(id, kategori) "
+                        + "VALUES('" + kategori.getId() + "','" + kategori.getKategori() + "')";
           System.out.println(query);
           stm.executeUpdate(query);
           conn.close();
           stm.close();
         }catch(Exception e){
             e.printStackTrace();
-        }
-         
-        
+        }      
     }
      
-   public void ubah(Kategori kategori) throws SQLException{
-        
+   public void ubah(Kategori kategori) throws SQLException{ 
         try{
           Koneksi obj = new Koneksi();
           Connection conn = obj.bukaKoneksi();
-          Statement stm = conn.createStatement();
-          
-          String query = "update kategoritbl set nama_kategori='" + kategori.getNamaKategori() + "' where kode_kategori='"+kategori.getKodeKategori()+"'";
+          Statement stm = conn.createStatement();         
+          String query = "UPDATE kategori SET kategori='" + kategori.getKategori() + "' WHERE id='"+kategori.getId()+"'";
           System.out.println(query);             
           stm.executeUpdate(query);
           conn.close();
@@ -52,55 +40,44 @@ public class KategoriDao {
             e.printStackTrace();
         }     
   }
-    
-        
+
+   
      public void hapus(Kategori kategori) throws SQLException{
-        
         try{
           Koneksi obj = new Koneksi();
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
-          
-          String query = "delete from kategoritbl where kode_kategori='" + kategori.getKodeKategori() + "'";
+          String query = "DELETE FROM kategori WHERE id='" + kategori.getId() + "'";
           System.out.println(query); 
           stm.executeUpdate(query);
           conn.close();
           stm.close();
         }catch(Exception e){
             e.printStackTrace();
-        }
-           
+        } 
     }
      
-    public Kategori cari(String kodeKategori) throws SQLException{
-            Kategori kategori = null;
-        
+    public Kategori cari(String id) throws SQLException{
+        Kategori kategori = null;
+        Koneksi obj = new Koneksi();
+        Connection conn = obj.bukaKoneksi();
+        Statement stm = conn.createStatement(); 
         try{
-         
-          Koneksi obj = new Koneksi();
-          Connection conn = obj.bukaKoneksi();
-          Statement stm = conn.createStatement();
-        
-          String query = "select * from kategoritbl where kode_kategori='"+kodeKategori+"'";
+          String query = "SELECT * FROM kategori WHERE id='"+id+"'";
           System.out.println(query);
-          ResultSet rs = stm.executeQuery(query);
-          
+          ResultSet rs = stm.executeQuery(query);         
           if(rs.next()){
               kategori = new Kategori();
-              kategori.setKodeKategori(rs.getString("kode_kategori"));
-              kategori.setNamaKategori(rs.getString("nama_kategori"));
-
+              kategori.setId(rs.getString("id"));
+              kategori.setKategori(rs.getString("kategori"));
           }
           conn.close();
-          stm.close();
-
-          
+          stm.close();         
         }catch(Exception e){
+            conn.close();
+            stm.close();
             e.printStackTrace();
         }
-        return kategori;
-         
-        
+        return kategori;       
     }
-    
 }

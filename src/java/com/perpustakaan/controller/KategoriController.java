@@ -1,9 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.perpustakaan.controller;
 
+package com.perpustakaan.controller;
 import com.perpustakaan.dao.KategoriDao;
 import com.perpustakaan.javabeans.Kategori;
 import java.io.IOException;
@@ -17,10 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author User
- */
 public class KategoriController extends HttpServlet {
 
     /**
@@ -33,7 +25,7 @@ public class KategoriController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-     // Kategori kategori = new Kategori();
+      Kategori kategori = new Kategori();
       KategoriDao kategoriDao = new KategoriDao();
       
       
@@ -41,37 +33,39 @@ public class KategoriController extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        Kategori kategori = new Kategori();
+        
+        String kodeKategori = request.getParameter("id");
+        String namaKategori = request.getParameter("kategori");
         RequestDispatcher rd;
+        
+        kategori.setId(kodeKategori);
+        kategori.setKategori(namaKategori);
        try {
-            /* TODO output your page here. You may use following sample code. */
-           String kodeKategori = request.getParameter("kodeKategori");
-           String namaKategori = request.getParameter("namaKategori");
            if(request.getParameter("cari") != null){
                kategori = kategoriDao.cari(kodeKategori);
                if(kategori != null){
-                    request.setAttribute("kodeKategori", kategori.getKodeKategori());
-                    request.setAttribute("namaKategori", kategori.getNamaKategori());    
+                    request.setAttribute("id", kategori.getId());
+                    request.setAttribute("kategori", kategori.getKategori());
+                    request.setAttribute("pesan", "berhasil di cari");
                }else{
-                   request.setAttribute("kodeKategori", kodeKategori);
+                   request.setAttribute("id", kodeKategori);
+                   request.setAttribute("pesan", "Data Tidak Ditemukan");
                }
                 rd = request.getRequestDispatcher("index.jsp?go=Kategori");
                 rd.forward(request, response);
            }else if(request.getParameter("simpan") != null){
-               kategori.setKodeKategori(kodeKategori);
-               kategori.setNamaKategori(namaKategori);
                kategoriDao.simpan(kategori);
+               request.setAttribute("pesan", "berhasil di input");
                rd = request.getRequestDispatcher("index.jsp?go=Kategori");
                rd.forward(request, response);
            }else if(request.getParameter("ubah") != null){
-               kategori.setKodeKategori(kodeKategori);
-               kategori.setNamaKategori(namaKategori);
                kategoriDao.ubah(kategori);
+               request.setAttribute("pesan", "berhasil di Ubah");
                rd = request.getRequestDispatcher("index.jsp?go=Kategori");
                rd.forward(request, response);
            }else if(request.getParameter("hapus") != null){
-               kategori.setKodeKategori(kodeKategori);
                kategoriDao.hapus(kategori);
+               request.setAttribute("pesan", "berhasil di Hapus");
                rd = request.getRequestDispatcher("index.jsp?go=Kategori");
                rd.forward(request, response);
            }
