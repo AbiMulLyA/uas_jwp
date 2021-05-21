@@ -12,9 +12,9 @@
 <% } else if (menu.equals("Rak")) {
 %>
 <%@ include file="rak.jsp"%>
-<%} else if (menu.equals("Peminjam")) {
+<%} else if (menu.equals("Costumer")) {
 %>
-<%@ include file="peminjam.jsp"%>
+<%@ include file="costumer.jsp"%>
 <%} else if (menu.equals("Buku")) {
 %>
 <%@ include file="buku.jsp"%>

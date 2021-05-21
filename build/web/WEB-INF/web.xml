@@ -8,6 +8,10 @@
         <servlet-name>PeminjamanController</servlet-name>
         <servlet-class>com.perpustakaan.controller.PeminjamanController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CostumerController</servlet-name>
+        <servlet-class>com.perpustakaan.controller.CostumerController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>KategoriBukuController</servlet-name>
         <url-pattern>/KategoriBukuController</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>PeminjamanController</servlet-name>
         <url-pattern>/PeminjamanController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CostumerController</servlet-name>
+        <url-pattern>/CostumerController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

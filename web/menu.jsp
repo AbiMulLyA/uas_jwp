@@ -8,7 +8,7 @@
    <li class='has-sub'><a href="#"><span>Master</span></a>
       <ul> 		  
 		 <li><a href="index.jsp?go=Kategori"><span>Data Kategori Produk</span></a></li>		 
-		 <li><a href="index.jsp?go=Peminjam"><span>Data Costumer</span></a></li>
+		 <li><a href="index.jsp?go=Costumer"><span>Data Costumer</span></a></li>
                  <li><a href="index.jsp?go=Buku"><span>Data Produk</span></a></li>
       </ul>
    </li>

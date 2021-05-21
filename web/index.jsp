@@ -19,7 +19,7 @@
             }
         </style>
     </head>
-
+    
     <body>
         <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
@@ -35,7 +35,7 @@
             </tr>
             <tr>
                 <td colspan="3" width="900" height="15" align="center" valign="top" background="Gambar/footer.png">
-                    <font face="Tahoma, Geneva, sans-serif" size="1" color="#000000"><b>Created : Java Web Programming</b></font>
+                    <font face="Tahoma, Geneva, sans-serif" size="1" color="#000000"><b>Created : Ahmad Abi Mulya & Muhammad Fathurachman</b></font>
                 </td>
             </tr>
         </table>
