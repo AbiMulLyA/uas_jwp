@@ -10,7 +10,7 @@
 		 <li><a href="index.jsp?go=Kategori"><span>Data Kategori Buku</span></a></li>		
 		 <li><a href="index.jsp?go=Rak"><span>Data Rak Buku</span></a></li>			 
 		 <li><a href="index.jsp?go=Peminjam"><span>Data Peminjam</span></a></li>
-                 <li><a href="index.jsp?go=Buku"><span>Data Buku</span></a></li>
+                 <li><a href="index.jsp?go=Produk"><span>Data Produk</span></a></li>
       </ul>
    </li>
    <li class='has-sub'><a href='#'><span>Transaksi</span></a>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <servlet>
-        <servlet-name>KategoriBukuController</servlet-name>
-        <servlet-class>com.perpustakaan.controller.KategoriController</servlet-class>
+        <servlet-name>ProdukController</servlet-name>
+        <servlet-class>com.penjualan.controller.ProdukController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>PeminjamanController</servlet-name>
-        <servlet-class>com.perpustakaan.controller.PeminjamanController</servlet-class>
+        <servlet-class>com.penjualan.controller.PeminjamanController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>KategoriBukuController</servlet-name>
-        <url-pattern>/KategoriBukuController</url-pattern>
+        <servlet-name>ProdukController</servlet-name>
+        <url-pattern>/ProdukController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>PeminjamanController</servlet-name>

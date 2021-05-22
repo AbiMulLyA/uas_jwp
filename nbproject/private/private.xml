@@ -3,8 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Perpustakaan_Transaksi/Perpustakaan/src/java/com/perpustakaan/controller/PeminjamanController.java</file>
-            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Perpustakaan_Transaksi/Perpustakaan/src/java/com/perpustakaan/controller/KategoriController.java</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/web/kategori.jsp</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/web/menu.jsp</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/web/produk.jsp</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/web/halaman.jsp</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/web/WEB-INF/web.xml</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/src/java/com/pernjualan/dao/ProdukDao.java</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/web/peminjaman.jsp</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/src/java/com/pernjualan/dao/KategoriDao.java</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/src/java/com/penjualan/controller/ProdukController.java</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/src/java/com/penjualan/controller/KategoriController.java</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/web/index.jsp</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/src/java/com/penjualan/javabeans/Produk.java</file>
+            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Uas/penjualan/web/rak.jsp</file>
         </group>
     </open-files>
 </project-private>

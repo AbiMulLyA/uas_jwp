@@ -2,10 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.perpustakaan.controller;
+package com.penjualan.controller;
 
-import com.perpustakaan.dao.KategoriDao;
-import com.perpustakaan.javabeans.Kategori;
+import com.pernjualan.dao.KategoriDao;
+import com.penjualan.javabeans.Kategori;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;

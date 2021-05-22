@@ -1,11 +1,11 @@
-/*
+ /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.perpustakaan.dao;
+package com.pernjualan.dao;
 
-import com.perpustakaan.javabeans.Kategori;
-import com.perpustakaan.koneksi.Koneksi;
+import com.penjualan.javabeans.Kategori;
+import com.peenjualan.koneksi.Koneksi;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

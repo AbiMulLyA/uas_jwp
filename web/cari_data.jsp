@@ -1,5 +1,5 @@
 <%@page import="java.sql.*" %>
-<%@page import="com.perpustakaan.koneksi.Koneksi" %>
+<%@page import="com.peenjualan.koneksi.Koneksi"%>
 <%
 
   String namaPeminjam = null;  
