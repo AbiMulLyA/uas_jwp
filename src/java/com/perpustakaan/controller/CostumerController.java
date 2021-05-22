@@ -40,6 +40,8 @@ public class CostumerController extends HttpServlet {
         String ttl = request.getParameter("ttl");
         String alamat = request.getParameter("alamat");
         String umur = request.getParameter("umur");
+        
+        String kodeCostumer = request.getParameter("kodeCostumer");
         RequestDispatcher rd;
         
         costumer.setKode_costumer(kode_costumer);
@@ -83,6 +85,23 @@ public class CostumerController extends HttpServlet {
                request.setAttribute("pesan", "berhasil di Hapus");
                rd = request.getRequestDispatcher("index.jsp?go=Costumer");
                rd.forward(request, response);
+           }else if(request.getParameter("select") != null){
+               costumer = costumerDao.cari(kodeCostumer);
+               if(costumer != null){
+                    request.setAttribute("kode_costumer", costumer.getKode_costumer());
+                    request.setAttribute("no_ktp", costumer.getNo_ktp());
+                    request.setAttribute("nama", costumer.getNama());
+                    request.setAttribute("no_telp", costumer.getNo_telp());
+                    request.setAttribute("ttl", costumer.getTtl());
+                    request.setAttribute("alamat", costumer.getAlamat());
+                    request.setAttribute("umur", costumer.getUmur());
+                    request.setAttribute("pesan", "berhasil di cari");
+               }else{
+                   request.setAttribute("kode_costumer", kode_costumer);
+                   request.setAttribute("pesan", "Data Tidak Ditemukan");
+               }
+                rd = request.getRequestDispatcher("index.jsp?go=Costumer");
+                rd.forward(request, response);
            }
         } finally {            
             out.close();

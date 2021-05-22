@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Perpustakaan_Transaksi/Perpustakaan/src/java/com/perpustakaan/controller/PeminjamanController.java</file>
-            <file>file:/Users/retmac/Abi/Belajar/Budi%20Luhur/Semester%204/Java%20Web/Perpustakaan_Transaksi/Perpustakaan/src/java/com/perpustakaan/controller/KategoriController.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/perpustakaan/controller/CostumerController.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/web/costumer.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/perpustakaan/javabeans/Costumer.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/perpustakaan/dao/CostumerDao.java</file>
         </group>
     </open-files>
 </project-private>
