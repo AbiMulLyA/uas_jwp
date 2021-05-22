@@ -1,7 +1,7 @@
 
-package com.perpustakaan.controller;
-import com.perpustakaan.dao.KategoriDao;
-import com.perpustakaan.javabeans.Kategori;
+package com.penjualan.controller;
+import com.penjualan.dao.KategoriDao;
+import com.penjualan.javabeans.Kategori;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;

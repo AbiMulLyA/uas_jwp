@@ -1,6 +1,6 @@
-package com.perpustakaan.dao;
-import com.perpustakaan.javabeans.Costumer;
-import com.perpustakaan.koneksi.Koneksi;
+package com.penjualan.dao;
+import com.penjualan.javabeans.Costumer;
+import com.penjualan.koneksi.Koneksi;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -2,10 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.perpustakaan.dao;
+package com.penjualan.dao;
 
-import com.perpustakaan.javabeans.Peminjaman;
-import com.perpustakaan.koneksi.Koneksi;
+import com.penjualan.javabeans.Peminjaman;
+import com.penjualan.koneksi.Koneksi;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;

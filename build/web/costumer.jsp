@@ -1,7 +1,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<%@page import="com.perpustakaan.koneksi.Koneksi"%>
+<%@page import="com.penjualan.koneksi.Koneksi"%>
 <style type="text/css">
 .main {
 	margin-top: 5px;

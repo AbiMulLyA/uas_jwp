@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.perpustakaan.controller;
+package com.penjualan.controller;
 
-import com.perpustakaan.dao.CostumerDao;
-import com.perpustakaan.javabeans.Costumer;
+import com.penjualan.dao.CostumerDao;
+import com.penjualan.javabeans.Costumer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;

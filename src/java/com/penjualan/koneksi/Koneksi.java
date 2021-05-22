@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package com.perpustakaan.koneksi;
+package com.penjualan.koneksi;
 import java.sql.*;
 
 public class Koneksi {

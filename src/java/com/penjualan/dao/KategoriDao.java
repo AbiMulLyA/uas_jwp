@@ -1,6 +1,6 @@
-package com.perpustakaan.dao;
-import com.perpustakaan.javabeans.Kategori;
-import com.perpustakaan.koneksi.Koneksi;
+package com.penjualan.dao;
+import com.penjualan.javabeans.Kategori;
+import com.penjualan.koneksi.Koneksi;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
