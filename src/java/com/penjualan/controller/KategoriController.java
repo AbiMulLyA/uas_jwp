@@ -1,5 +1,6 @@
 
 package com.penjualan.controller;
+
 import com.penjualan.dao.KategoriDao;
 import com.penjualan.javabeans.Kategori;
 import java.io.IOException;
@@ -15,16 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class KategoriController extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP
-     * <code>GET</code> and
-     * <code>POST</code> methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
       Kategori kategori = new Kategori();
       KategoriDao kategoriDao = new KategoriDao();
       

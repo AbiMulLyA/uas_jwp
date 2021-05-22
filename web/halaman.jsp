@@ -12,10 +12,12 @@
 
 <%} else if (menu.equals("Costumer")) {
 %>
-<%@ include file="costumer.jsp"%>
-<%} else if (menu.equals("Buku")) {
-%>
 
+<%@ include file="costumer.jsp"%>
+
+<%} else if (menu.equals("Produk")) {
+%>
+<%@ include file="produk.jsp"%>
 
 <%}
 %>

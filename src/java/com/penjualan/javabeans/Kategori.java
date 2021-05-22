@@ -10,13 +10,8 @@ package com.penjualan.javabeans;
  */
 
 public class Kategori {
-    public String id;
-    public String kategori;
-    public String tanggal;
-    public String brand;
-    public String vendor;
-    public String remark;
-    public String status;
+    private String id;
+    private String kategori;
 
     public String getId() {
         return id;
@@ -34,45 +29,8 @@ public class Kategori {
         this.kategori = kategori;
     }
 
-    public String getTanggal() {
-        return tanggal;
-    }
 
-    public void setTanggal(String tanggal) {
-        this.tanggal = tanggal;
-    }
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getVendor() {
-        return vendor;
-    }
-
-    public void setVendor(String vendor) {
-        this.vendor = vendor;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
+   
 }
 

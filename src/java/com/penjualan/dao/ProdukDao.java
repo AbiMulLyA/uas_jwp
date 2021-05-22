@@ -1,30 +1,32 @@
- /*
- * To change this template, choose Tools | Templates
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package com.penjualan.dao;
 
-import com.penjualan.javabeans.Kategori;
 import com.penjualan.koneksi.Koneksi;
+import com.penjualan.javabeans.Produk;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
-public class KategoriDao {
-   
-    
-     public void simpan(Kategori kategori) throws SQLException{
+/**
+ *
+ * @author retmac
+ */
+public class ProdukDao {
+    public void simpan(Produk produk) throws SQLException{
         
         try{
           Koneksi obj = new Koneksi();
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
           
-          String query = "insert into kategoritbl"
-                        + "(kode_kategori,nama_kategori) "
-                        + "values('" + kategori.getId() + "','" + kategori.getKategori() + "')";
+          String query = "insert into produk"
+                        + "(kode_produk,nama_produk,kategori_produk,harga,qty,berat,varian) "
+                        + "values('" + produk.getKodeProduk() + "','" + produk.getNamaProduk() + "','" + produk.getKategoriProduk() + "','" + produk.getHarga() + "','" + produk.getQty() + "','" + produk.getBerat() + "','" + produk.getVarian() + "')";
           System.out.println(query);
           stm.executeUpdate(query);
           conn.close();
@@ -36,14 +38,14 @@ public class KategoriDao {
         
     }
      
-   public void ubah(Kategori kategori) throws SQLException{
+   public void ubah(Produk produk) throws SQLException{
         
         try{
           Koneksi obj = new Koneksi();
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
           
-          String query = "update kategoritbl set nama_kategori='" + kategori.getId() + "' where kode_kategori='"+kategori.getKategori()+"'";
+          String query = "update produk set nama_produk='" + produk.getNamaProduk() + "' where kode_produk='"+produk.getKodeProduk()+"'";
           System.out.println(query);             
           stm.executeUpdate(query);
           conn.close();
@@ -54,14 +56,14 @@ public class KategoriDao {
   }
     
         
-     public void hapus(Kategori kategori) throws SQLException{
+     public void hapus(Produk produk) throws SQLException{
         
         try{
           Koneksi obj = new Koneksi();
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
           
-          String query = "delete from kategoritbl where kode_kategori='" + kategori.getId() + "'";
+          String query = "delete from produk where kode_produk='" + produk.getKodeProduk() + "'";
           System.out.println(query); 
           stm.executeUpdate(query);
           conn.close();
@@ -72,8 +74,8 @@ public class KategoriDao {
            
     }
      
-    public Kategori cari(String kodeKategori) throws SQLException{
-            Kategori kategori = null;
+    public Produk cari(String kodeProduk) throws SQLException{
+            Produk produk = null;
         
         try{
          
@@ -81,14 +83,14 @@ public class KategoriDao {
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
         
-          String query = "select * from kategoritbl where kode_kategori='"+kodeKategori+"'";
+          String query = "select * from produk where kode_produk='"+kodeProduk+"'";
           System.out.println(query);
           ResultSet rs = stm.executeQuery(query);
           
           if(rs.next()){
-              kategori = new Kategori();
-              kategori.setId(rs.getString("kode_kategori"));
-              kategori.setKategori(rs.getString("nama_kategori"));
+              produk = new Produk();
+              produk.setKodeProduk(rs.getString("kode_produk"));
+              produk.setNamaProduk(rs.getString("nama_produk"));
 
           }
           conn.close();
@@ -98,9 +100,8 @@ public class KategoriDao {
         }catch(Exception e){
             e.printStackTrace();
         }
-        return kategori;
+        return produk;
          
         
     }
-    
 }

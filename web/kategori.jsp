@@ -1,6 +1,8 @@
 
 <%@page import="java.sql.*" %>
+
 <%@page import="com.penjualan.koneksi.Koneksi" %>
+
 <style type="text/css">
 .main {
 	margin-top: 5px;
@@ -22,7 +24,7 @@
 	<td>
             <center><h2>${pesan}</h2></center>
           
-<form id="form1" name="form1" method="post" action="KategoriBukuController">
+<form id="form1" name="form1" method="post" action="KategoriController">
   <table width="400" border="0" align="left">
     <tr>
       <td width="30%" align="left" valign="middle">Kode Kategori</td>
