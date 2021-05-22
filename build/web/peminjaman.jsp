@@ -1,4 +1,4 @@
-<%@page import="com.peenjualan.koneksi.Koneksi"%>
+<%@page import="com.penjualan.koneksi.Koneksi"%>
 <%@page import="java.sql.*" %>
 <style type="text/css">
     .main {

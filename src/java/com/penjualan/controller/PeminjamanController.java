@@ -4,7 +4,7 @@
  */
 package com.penjualan.controller;
 
-import com.pernjualan.dao.PeminjamanDao;
+import com.penjualan.dao.PeminjamanDao;
 import com.penjualan.javabeans.Peminjaman;
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -4,7 +4,7 @@
  */
 package com.penjualan.controller;
 
-import com.pernjualan.dao.KategoriDao;
+import com.penjualan.dao.KategoriDao;
 import com.penjualan.javabeans.Kategori;
 import java.io.IOException;
 import java.io.PrintWriter;

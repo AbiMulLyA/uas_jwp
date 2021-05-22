@@ -1,6 +1,6 @@
 
 <%@page import="java.sql.*" %>
-<%@page import="com.peenjualan.koneksi.Koneksi"%>
+<%@page import="com.penjualan.koneksi.Koneksi"%>
 <style type="text/css">
 .main {
 	margin-top: 5px;

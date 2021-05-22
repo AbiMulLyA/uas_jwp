@@ -6,7 +6,7 @@
 package com.penjualan.controller;
 
 import com.penjualan.javabeans.Produk;
-import com.pernjualan.dao.ProdukDao;
+import com.penjualan.dao.ProdukDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
