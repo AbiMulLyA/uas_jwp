@@ -22,9 +22,11 @@ public class KategoriDao {
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
           
-          String query = "insert into kategoritbl"
-                        + "(kode_kategori,nama_kategori) "
-                        + "values('" + kategori.getId() + "','" + kategori.getKategori() + "')";
+          String query = "INSERT INTO kategori"
+                        + "(id, kategori, tanggal, brand, vendor, remark, status) "
+                        + "VALUES('" + kategori.getId()+ "','" + kategori.getKategori()+ "','" 
+                        + kategori.getTanggal()+ "','" + kategori.getBrand()+ "','" 
+                        + kategori.getVendor()+ "','" + kategori.getRemark()+ "','" + kategori.getStatus() + "')";
           System.out.println(query);
           stm.executeUpdate(query);
           conn.close();
@@ -43,7 +45,7 @@ public class KategoriDao {
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
           
-          String query = "update kategoritbl set nama_kategori='" + kategori.getId() + "' where kode_kategori='"+kategori.getKategori()+"'";
+          String query = "UPDATE kategori SET kategori='" + kategori.getKategori() + "' , tanggal='" + kategori.getTanggal() + "' , brand='" + kategori.getBrand() + "' , vendor='" + kategori.getVendor() + "' , remark='" + kategori.getRemark() + "' , status='" + kategori.getStatus() + "' WHERE id='"+kategori.getId()+"'";
           System.out.println(query);             
           stm.executeUpdate(query);
           conn.close();
@@ -61,7 +63,7 @@ public class KategoriDao {
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
           
-          String query = "delete from kategoritbl where kode_kategori='" + kategori.getId() + "'";
+          String query = "DELETE FROM kategori WHERE id='" + kategori.getId() + "'";
           System.out.println(query); 
           stm.executeUpdate(query);
           conn.close();
@@ -72,7 +74,7 @@ public class KategoriDao {
            
     }
      
-    public Kategori cari(String kodeKategori) throws SQLException{
+    public Kategori cari(String id) throws SQLException{
             Kategori kategori = null;
         
         try{
@@ -81,14 +83,19 @@ public class KategoriDao {
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
         
-          String query = "select * from kategoritbl where kode_kategori='"+kodeKategori+"'";
+          String query = "SELECT * FROM kategori WHERE id='"+id+"'";
           System.out.println(query);
           ResultSet rs = stm.executeQuery(query);
           
           if(rs.next()){
               kategori = new Kategori();
-              kategori.setId(rs.getString("kode_kategori"));
-              kategori.setKategori(rs.getString("nama_kategori"));
+              kategori.setId(rs.getString("id"));
+              kategori.setKategori(rs.getString("kategori"));
+              kategori.setTanggal(rs.getString("tanggal"));
+              kategori.setBrand(rs.getString("brand"));
+              kategori.setVendor(rs.getString("vendor"));
+              kategori.setRemark(rs.getString("remark"));
+              kategori.setStatus(rs.getString("status"));
 
           }
           conn.close();

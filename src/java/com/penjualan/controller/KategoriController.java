@@ -25,21 +25,39 @@ public class KategoriController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        String kodeKategori = request.getParameter("id");
+        String id = request.getParameter("id");
         String namaKategori = request.getParameter("kategori");
+        String tanggal = request.getParameter("tanggal");
+        String brand = request.getParameter("brand");
+        String vendor = request.getParameter("vendor");
+        String remark = request.getParameter("remark");
+        String status = request.getParameter("status");
+        String selectId = request.getParameter("selectId");
+        
         RequestDispatcher rd;
         
-        kategori.setId(kodeKategori);
+        kategori.setId(id);
         kategori.setKategori(namaKategori);
+        kategori.setTanggal(tanggal);
+        kategori.setBrand(brand);
+        kategori.setVendor(vendor);
+        kategori.setRemark(remark);
+        kategori.setStatus(status);
+        
        try {
            if(request.getParameter("cari") != null){
-               kategori = kategoriDao.cari(kodeKategori);
+               kategori = kategoriDao.cari(id);
                if(kategori != null){
                     request.setAttribute("id", kategori.getId());
                     request.setAttribute("kategori", kategori.getKategori());
+                    request.setAttribute("tanggal", kategori.getTanggal());
+                    request.setAttribute("brand", kategori.getBrand());
+                    request.setAttribute("vendor", kategori.getVendor());
+                    request.setAttribute("remark", kategori.getRemark());
+                    request.setAttribute("status", kategori.getStatus());
                     request.setAttribute("pesan", "berhasil di cari");
                }else{
-                   request.setAttribute("id", kodeKategori);
+                   request.setAttribute("id", id);
                    request.setAttribute("pesan", "Data Tidak Ditemukan");
                }
                 rd = request.getRequestDispatcher("index.jsp?go=Kategori");
@@ -59,6 +77,24 @@ public class KategoriController extends HttpServlet {
                request.setAttribute("pesan", "berhasil di Hapus");
                rd = request.getRequestDispatcher("index.jsp?go=Kategori");
                rd.forward(request, response);
+           }else if(request.getParameter("idSelected") != null){
+               String idSelected= request.getParameter("idSelected");
+               kategori = kategoriDao.cari(idSelected);
+               if(kategori != null){
+                    request.setAttribute("id", kategori.getId());
+                    request.setAttribute("kategori", kategori.getKategori());
+                    request.setAttribute("tanggal", kategori.getTanggal());
+                    request.setAttribute("brand", kategori.getBrand());
+                    request.setAttribute("vendor", kategori.getVendor());
+                    request.setAttribute("remark", kategori.getRemark());
+                    request.setAttribute("status", kategori.getStatus());
+                    request.setAttribute("pesan", "berhasil di cari");
+               }else{
+                   request.setAttribute("id", id);
+                   request.setAttribute("pesan", "Data Tidak Ditemukan");
+               }
+                rd = request.getRequestDispatcher("index.jsp?go=Kategori");
+                rd.forward(request, response);
            }
         } finally {            
             out.close();
