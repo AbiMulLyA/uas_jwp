@@ -51,6 +51,8 @@ public class ProdukController extends HttpServlet {
            String qty = request.getParameter("qty");
            String berat = request.getParameter("berat");
            String varian = request.getParameter("varian");
+           
+           String selectKodeProduk = request.getParameter("selectKodeProduk");
 
            if(request.getParameter("cari") != null){
                produk = produkDao.cari(kodeProduk);
@@ -90,6 +92,23 @@ public class ProdukController extends HttpServlet {
                produkDao.hapus(produk);
                rd = request.getRequestDispatcher("index.jsp?go=Produk");
                rd.forward(request, response);
+           }else if(request.getParameter("select") != null){
+               produk = produkDao.cari(selectKodeProduk);
+               if(produk != null){
+                    request.setAttribute("kodeProduk", produk.getKodeProduk());
+                    request.setAttribute("namaProduk", produk.getNamaProduk());
+                    request.setAttribute("kategoriProduk", produk.getKategoriProduk());
+                    request.setAttribute("harga", produk.getHarga());
+                    request.setAttribute("qty", produk.getQty());
+                    request.setAttribute("berat", produk.getBerat());
+                    request.setAttribute("varian", produk.getVarian());
+                    request.setAttribute("pesan", "berhasil di cari");
+               }else{
+                   request.setAttribute("kodeProduk", kodeProduk);
+                   request.setAttribute("pesan", "Data Tidak Ditemukan");
+               }
+                rd = request.getRequestDispatcher("index.jsp?go=Produk");
+                rd.forward(request, response);
            }
         } finally {            
             out.close();

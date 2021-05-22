@@ -74,34 +74,33 @@ public class ProdukDao {
            
     }
      
-    public Produk cari(String kodeProduk) throws SQLException{
-            Produk produk = null;
-        
+    public Produk cari(String kode_produk) throws SQLException{
+        Produk produk = null;
+        Koneksi obj = new Koneksi();
+        Connection conn = obj.bukaKoneksi();
+        Statement stm = conn.createStatement(); 
         try{
-         
-          Koneksi obj = new Koneksi();
-          Connection conn = obj.bukaKoneksi();
-          Statement stm = conn.createStatement();
-        
-          String query = "select * from produk where kode_produk='"+kodeProduk+"'";
+          String query = "SELECT * FROM produk WHERE kode_produk='"+kode_produk+"'";
           System.out.println(query);
-          ResultSet rs = stm.executeQuery(query);
-          
+          ResultSet rs = stm.executeQuery(query);         
           if(rs.next()){
               produk = new Produk();
               produk.setKodeProduk(rs.getString("kode_produk"));
               produk.setNamaProduk(rs.getString("nama_produk"));
-
+              produk.setKategoriProduk(rs.getString("kategori_produk"));
+              produk.setHarga(rs.getString("harga"));
+              produk.setQty(rs.getString("qty"));
+              produk.setBerat(rs.getString("berat"));
+              produk.setVarian(rs.getString("varian"));
+              
           }
           conn.close();
-          stm.close();
-
-          
+          stm.close();         
         }catch(Exception e){
+            conn.close();
+            stm.close();
             e.printStackTrace();
         }
-        return produk;
-         
-        
+        return produk;       
     }
 }
