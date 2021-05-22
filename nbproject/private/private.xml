@@ -3,10 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/perpustakaan/controller/CostumerController.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/penjualan/koneksi/Koneksi.java</file>
             <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/web/costumer.jsp</file>
-            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/perpustakaan/javabeans/Costumer.java</file>
-            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/perpustakaan/dao/CostumerDao.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/web/menu.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/penjualan/controller/CostumerController.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/web/peminjaman.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/web/META-INF/context.xml</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/web/peminjaman_tambah.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/penjualan/controller/PeminjamanController.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/web/kategori.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/penjualan/dao/PeminjamanDao.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/web/buku.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/penjualan/dao/CostumerDao.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/penjualan/controller/KategoriController.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/penjualan/dao/KategoriDao.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/web/rak.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/JWP/uas_jwp/src/java/com/penjualan/javabeans/Costumer.java</file>
         </group>
     </open-files>
 </project-private>
