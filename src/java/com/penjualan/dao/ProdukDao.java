@@ -45,7 +45,7 @@ public class ProdukDao {
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
           
-          String query = "update produk set nama_produk='" + produk.getNamaProduk() + "' where kode_produk='"+produk.getKodeProduk()+"'";
+          String query = "UPDATE produk SET nama_produk='" + produk.getNamaProduk() + "' , kategori_produk='" + produk.getKategoriProduk()+ "' , harga='" + produk.getHarga() + "' , qty='" + produk.getQty() + "' , berat='" + produk.getBerat() + "' , varian='" + produk.getVarian() + "' WHERE kode_produk='"+produk.getKodeProduk()+"'";
           System.out.println(query);             
           stm.executeUpdate(query);
           conn.close();
@@ -83,7 +83,7 @@ public class ProdukDao {
           Connection conn = obj.bukaKoneksi();
           Statement stm = conn.createStatement();
         
-          String query = "select * from produk where kode_produk='"+kodeProduk+"'";
+          String query = "SELECT * FROM produk WHERE kode_produk='"+kodeProduk+"'";
           System.out.println(query);
           ResultSet rs = stm.executeQuery(query);
           
@@ -91,7 +91,11 @@ public class ProdukDao {
               produk = new Produk();
               produk.setKodeProduk(rs.getString("kode_produk"));
               produk.setNamaProduk(rs.getString("nama_produk"));
-
+              produk.setKategoriProduk(rs.getString("kategori_produk"));
+              produk.setHarga(rs.getString("harga"));
+              produk.setQty(rs.getString("qty"));
+              produk.setBerat(rs.getString("berat"));
+              produk.setVarian(rs.getString("varian"));
           }
           conn.close();
           stm.close();

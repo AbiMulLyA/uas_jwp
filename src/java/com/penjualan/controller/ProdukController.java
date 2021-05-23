@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.penjualan.controller;
 
 import com.penjualan.javabeans.Produk;
@@ -18,32 +13,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-/**
- *
- * @author retmac
- */
 @WebServlet(name = "ProdukController", urlPatterns = {"/ProdukController"})
 public class ProdukController extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     ProdukDao produkDao = new ProdukDao();
+    Produk produk = new Produk();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
          response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        Produk produk = new Produk();
+        
         RequestDispatcher rd;
        try {
-            /* TODO output your page here. You may use following sample code. */
            String kodeProduk = request.getParameter("kodeProduk");
            String namaProduk = request.getParameter("namaProduk");
            String kategoriProduk = request.getParameter("kategoriProduk");
@@ -51,45 +31,71 @@ public class ProdukController extends HttpServlet {
            String qty = request.getParameter("qty");
            String berat = request.getParameter("berat");
            String varian = request.getParameter("varian");
-
+           String kodeSelected = request.getParameter("kodeSelected");
+           String kategoriProdukHidden = request.getParameter("kategoriProdukHidden");
+           
+           produk.setKodeProduk(kodeProduk);
+               produk.setNamaProduk(namaProduk);
+               produk.setKategoriProduk(kategoriProduk);
+               produk.setHarga(harga);
+               produk.setQty(qty);
+               produk.setBerat(berat);
+               produk.setVarian(varian);
            if(request.getParameter("cari") != null){
                produk = produkDao.cari(kodeProduk);
                if(produk != null){
                     request.setAttribute("kodeProduk", produk.getKodeProduk());
-                    request.setAttribute("namaproduk", produk.getNamaProduk());    
+                    request.setAttribute("namaProduk", produk.getNamaProduk());
+                    request.setAttribute("kategoriProduk", produk.getKategoriProduk());
+                    request.setAttribute("harga", produk.getHarga());
+                    request.setAttribute("qty", produk.getQty());
+                    request.setAttribute("berat", produk.getBerat());
+                    request.setAttribute("varian", produk.getVarian());
+                    request.setAttribute("pesan", "berhasil di cari");
                }else{
                    request.setAttribute("kodeProduk", kodeProduk);
+                   request.setAttribute("pesan", "data tidak ada");
                }
                 rd = request.getRequestDispatcher("index.jsp?go=Produk");
                 rd.forward(request, response);
            }else if(request.getParameter("simpan") != null){
-               produk.setKodeProduk(kodeProduk);
-               produk.setNamaProduk(namaProduk);
-               produk.setKategoriProduk(kategoriProduk);
-               produk.setHarga(harga);
-               produk.setQty(qty);
-               produk.setBerat(berat);
-               produk.setVarian(varian);
-               
                produkDao.simpan(produk);
+               request.setAttribute("pesan", "Data Berhasil Disimpan");
                rd = request.getRequestDispatcher("index.jsp?go=Produk");
                rd.forward(request, response);
            }else if(request.getParameter("ubah") != null){
-               produk.setKodeProduk(kodeProduk);
-               produk.setNamaProduk(namaProduk);
-               produk.setKategoriProduk(kategoriProduk);
-               produk.setHarga(harga);
-               produk.setQty(qty);
-               produk.setBerat(berat);
-               produk.setVarian(varian);
+               if(request.getParameter("kategoriProduk")=="null"){
+                  produk.setKategoriProduk(kategoriProdukHidden);
+               }else{
+                  produk.setKategoriProduk(kategoriProduk);
+               }
                produkDao.ubah(produk);
+               request.setAttribute("pesan", "Data Berhasil Diubah");
                rd = request.getRequestDispatcher("index.jsp?go=Produk");
                rd.forward(request, response);
            }else if(request.getParameter("hapus") != null){
                produk.setKodeProduk(kodeProduk);
+               request.setAttribute("pesan", "Data Berhasil Dihapus");
                produkDao.hapus(produk);
                rd = request.getRequestDispatcher("index.jsp?go=Produk");
                rd.forward(request, response);
+           }else if(request.getParameter("kodeSelected") != null){
+               produk = produkDao.cari(kodeSelected);
+               if(produk != null){
+                    request.setAttribute("kodeProduk", produk.getKodeProduk());
+                    request.setAttribute("namaProduk", produk.getNamaProduk());
+                    request.setAttribute("kategoriProduk", produk.getKategoriProduk());
+                    request.setAttribute("harga", produk.getHarga());
+                    request.setAttribute("qty", produk.getQty());
+                    request.setAttribute("berat", produk.getBerat());
+                    request.setAttribute("varian", produk.getVarian());
+                    request.setAttribute("pesan", "berhasil di cari");
+               }else{
+                   request.setAttribute("kodeProduk", kodeProduk);
+                   request.setAttribute("pesan", "data tidak ada");
+               }
+                rd = request.getRequestDispatcher("index.jsp?go=Produk");
+                rd.forward(request, response);
            }
         } finally {            
             out.close();
