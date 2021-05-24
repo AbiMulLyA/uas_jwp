@@ -15,11 +15,17 @@
 
 <%@ include file="costumer.jsp"%>
 
+<%} else if (menu.equals("Transaksi")) {
+%>
+
+<%@ include file="transaksi.jsp"%>
+
 <%} else if (menu.equals("Produk")) {
 %>
 <%@ include file="produk.jsp"%>
 
 <%}
+
 %>
 
 

@@ -14,7 +14,7 @@
    </li>
    <li class='has-sub'><a href='#'><span>Transaksi</span></a>
         <ul> 
-            <li><a href="index.jsp?go=Peminjaman"><span>Data Transaksi Penjualan</span></a></li>						
+            <li><a href="index.jsp?go=Transaksi"><span>Data Transaksi Penjualan</span></a></li>						
        </ul>    
     </li> 
     </ul>

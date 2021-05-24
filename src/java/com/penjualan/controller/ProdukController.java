@@ -64,7 +64,7 @@ public class ProdukController extends HttpServlet {
                rd = request.getRequestDispatcher("index.jsp?go=Produk");
                rd.forward(request, response);
            }else if(request.getParameter("ubah") != null){
-               if(request.getParameter("kategoriProduk")=="null"){
+               if(request.getParameter("kategoriProdukHidden")=="null"){
                   produk.setKategoriProduk(kategoriProdukHidden);
                }else{
                   produk.setKategoriProduk(kategoriProduk);

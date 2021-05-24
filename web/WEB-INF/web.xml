@@ -12,6 +12,10 @@
         <servlet-name>CostumerController</servlet-name>
         <servlet-class>com.penjualan.controller.CostumerController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TransaksiController</servlet-name>
+        <servlet-class>com.penjualan.controller.TransaksiController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProdukController</servlet-name>
         <url-pattern>/ProdukController</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>CostumerController</servlet-name>
         <url-pattern>/CostumerController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TransaksiController</servlet-name>
+        <url-pattern>/TransaksiController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
