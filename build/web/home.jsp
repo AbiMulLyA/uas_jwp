@@ -19,7 +19,7 @@
 	<td>
 <form id="form1" name="form1" method="post" >
   <table width="400" border="0" align="left">
-   Selamat Datang di Sistem Perpustakan Sederhana Berbasis Web
+   Selamat Datang di Point Of Sale
   </table>
 </form>
 </td>

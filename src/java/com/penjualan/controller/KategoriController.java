@@ -55,7 +55,7 @@ public class KategoriController extends HttpServlet {
                     request.setAttribute("vendor", kategori.getVendor());
                     request.setAttribute("remark", kategori.getRemark());
                     request.setAttribute("status", kategori.getStatus());
-                    request.setAttribute("pesan", "berhasil di cari");
+                    request.setAttribute("pesan", "Berhasil di cari");
                }else{
                    request.setAttribute("id", id);
                    request.setAttribute("pesan", "Data Tidak Ditemukan");
@@ -64,7 +64,7 @@ public class KategoriController extends HttpServlet {
                 rd.forward(request, response);
            }else if(request.getParameter("simpan") != null){
                kategoriDao.simpan(kategori);
-               request.setAttribute("pesan", "berhasil di input");
+               request.setAttribute("pesan", "Berhasil di input");
                rd = request.getRequestDispatcher("index.jsp?go=Kategori");
                rd.forward(request, response);
            }else if(request.getParameter("ubah") != null){
@@ -74,7 +74,7 @@ public class KategoriController extends HttpServlet {
                rd.forward(request, response);
            }else if(request.getParameter("hapus") != null){
                kategoriDao.hapus(kategori);
-               request.setAttribute("pesan", "berhasil di Hapus");
+               request.setAttribute("pesan", "Berhasil di Hapus");
                rd = request.getRequestDispatcher("index.jsp?go=Kategori");
                rd.forward(request, response);
            }else if(request.getParameter("idSelected") != null){
@@ -88,7 +88,7 @@ public class KategoriController extends HttpServlet {
                     request.setAttribute("vendor", kategori.getVendor());
                     request.setAttribute("remark", kategori.getRemark());
                     request.setAttribute("status", kategori.getStatus());
-                    request.setAttribute("pesan", "berhasil di cari");
+                    request.setAttribute("pesan", "Berhasil di cari");
                }else{
                    request.setAttribute("id", id);
                    request.setAttribute("pesan", "Data Tidak Ditemukan");

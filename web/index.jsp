@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Untitled Document</title>
+        <title>Point Of Sale</title>
         <style type="text/css">
             body {
                 background-image: url(Gambar/background.jpg);
@@ -23,10 +23,6 @@
     <body>
         <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
-                <th colspan="2" scope="col"><font face="Verdana, Geneva, sans-serif" size="1" color="#FFFFFF"> <b>
-                            Sistem Perpustakaan Sederhana Berbasis Web</b></font></th>
-            </tr>
-            <tr>
                 <td colspan="2" background="Gambar/header.png" width="900" height="99"/></td>
             </tr>
             <tr>
@@ -35,7 +31,7 @@
             </tr>
             <tr>
                 <td colspan="3" width="900" height="15" align="center" valign="top" background="Gambar/footer.png">
-                    <font face="Tahoma, Geneva, sans-serif" size="1" color="#000000"><b>Created : Ahmad Abi Mulya & Muhammad Fathurachman</b></font>
+                    <font face="Tahoma, Geneva, sans-serif" size="1" color="#000000"><b>Created by : Ahmad Abi Mulya & Muhammad Fathurachman</b></font>
                 </td>
             </tr>
         </table>

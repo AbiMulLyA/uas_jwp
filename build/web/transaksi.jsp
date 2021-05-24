@@ -30,7 +30,7 @@
 <div class="main">
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
 	<tr>
-		<th align="left" scope="col"><font face="Tahoma, Geneva, sans-serif" color="#000000" size="3">DATA KATEGORI</font></th>
+		<th align="left" scope="col"><font face="Tahoma, Geneva, sans-serif" color="#000000" size="3">DATA TRANSAKSI</font></th>
         </tr>
 	<tr>
 	  <td><hr /></td>

@@ -51,7 +51,7 @@ public class ProdukController extends HttpServlet {
                     request.setAttribute("qty", produk.getQty());
                     request.setAttribute("berat", produk.getBerat());
                     request.setAttribute("varian", produk.getVarian());
-                    request.setAttribute("pesan", "berhasil di cari");
+                    request.setAttribute("pesan", "Berhasil di cari");
                }else{
                    request.setAttribute("kodeProduk", kodeProduk);
                    request.setAttribute("pesan", "data tidak ada");
@@ -89,7 +89,7 @@ public class ProdukController extends HttpServlet {
                     request.setAttribute("qty", produk.getQty());
                     request.setAttribute("berat", produk.getBerat());
                     request.setAttribute("varian", produk.getVarian());
-                    request.setAttribute("pesan", "berhasil di cari");
+                    request.setAttribute("pesan", "Berhasil di cari");
                }else{
                    request.setAttribute("kodeProduk", kodeProduk);
                    request.setAttribute("pesan", "data tidak ada");

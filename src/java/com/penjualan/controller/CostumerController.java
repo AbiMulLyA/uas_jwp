@@ -41,7 +41,7 @@ public class CostumerController extends HttpServlet {
         String alamat = request.getParameter("alamat");
         String umur = request.getParameter("umur");
         
-        String kodeCostumer = request.getParameter("kodeCostumer");
+        String selectKodeCustomer = request.getParameter("kodeSelected");
         RequestDispatcher rd;
         
         costumer.setKode_costumer(kode_costumer);
@@ -63,7 +63,7 @@ public class CostumerController extends HttpServlet {
                     request.setAttribute("ttl", costumer.getTtl());
                     request.setAttribute("alamat", costumer.getAlamat());
                     request.setAttribute("umur", costumer.getUmur());
-                    request.setAttribute("pesan", "berhasil di cari");
+                    request.setAttribute("pesan", "Berhasil di cari");
                }else{
                    request.setAttribute("kode_costumer", kode_costumer);
                    request.setAttribute("pesan", "Data Tidak Ditemukan");
@@ -72,21 +72,22 @@ public class CostumerController extends HttpServlet {
                 rd.forward(request, response);
            }else if(request.getParameter("simpan") != null){
                costumerDao.simpan(costumer);
-               request.setAttribute("pesan", "berhasil di input");
+               request.setAttribute("pesan", "Berhasil di input");
                rd = request.getRequestDispatcher("index.jsp?go=Costumer");
                rd.forward(request, response);
            }else if(request.getParameter("ubah") != null){
                costumerDao.ubah(costumer);
-               request.setAttribute("pesan", "berhasil di Ubah");
+               request.setAttribute("pesan", "Berhasil di Ubah");
                rd = request.getRequestDispatcher("index.jsp?go=Costumer");
                rd.forward(request, response);
            }else if(request.getParameter("hapus") != null){
                costumerDao.hapus(costumer);
-               request.setAttribute("pesan", "berhasil di Hapus");
+               request.setAttribute("pesan", "Berhasil di Hapus");
                rd = request.getRequestDispatcher("index.jsp?go=Costumer");
                rd.forward(request, response);
-           }else if(request.getParameter("select") != null){
-               costumer = costumerDao.cari(kodeCostumer);
+           }else if(request.getParameter("kodeSelected") != null){
+               String kodeSelected= request.getParameter("kodeSelected");
+               costumer = costumerDao.cari(kodeSelected);
                if(costumer != null){
                     request.setAttribute("kode_costumer", costumer.getKode_costumer());
                     request.setAttribute("no_ktp", costumer.getNo_ktp());
@@ -95,7 +96,7 @@ public class CostumerController extends HttpServlet {
                     request.setAttribute("ttl", costumer.getTtl());
                     request.setAttribute("alamat", costumer.getAlamat());
                     request.setAttribute("umur", costumer.getUmur());
-                    request.setAttribute("pesan", "berhasil di cari");
+                    request.setAttribute("pesan", "Berhasil di cari");
                }else{
                    request.setAttribute("kode_costumer", kode_costumer);
                    request.setAttribute("pesan", "Data Tidak Ditemukan");

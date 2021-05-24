@@ -12,7 +12,6 @@
 </style>
 
 <link href="JQuery/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-
 <script src="JQuery/jquery-1.9.1.js"></script>
 <script src="JQuery/jquery-ui-1.10.3.custom.js"></script>
 
@@ -20,7 +19,7 @@
     $(document).ready(function(){
 				
         $("#ttl").datepicker({
-            showOn: "both", buttonImage: "Gambar/calendar.png", buttonImageOnly: true, changeMonth: true, changeYear: true, dateFormat: "yy-mm-dd", appendText: "${ttl}"});
+            showOn: "both", buttonImage: "Gambar/calendar.png", buttonImageOnly: true, changeMonth: true, changeYear: true, dateFormat: "yy-mm-dd"});
     });	
 		
 
@@ -30,7 +29,7 @@
 <div class="main">
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
 	<tr>
-		<th align="left" scope="col"><font face="Tahoma, Geneva, sans-serif" color="#000000" size="3">DATA PEMINJAM</font></th>
+		<th align="left" scope="col"><font face="Tahoma, Geneva, sans-serif" color="#000000" size="3">DATA CUSTOMER</font></th>
   </tr>
 	<tr>
 	  <td><hr /></td>
@@ -67,7 +66,7 @@
     <tr>
       <td align="left" valign="top">TTL</td>
       <td align="left" valign="top">:</td>
-      <td align="left" valign="top"><input name="ttl" type="text" id="ttl" value="" size="10" maxlength="10" value="${ttl}" /></td>
+      <td align="left" valign="top"><input name="ttl" type="text" id="ttl"size="10" maxlength="10" value="${ttl}" /></td>
     </tr>
     <tr>
       <td align="left" valign="top">Alamat</td>
@@ -138,7 +137,7 @@
                     <td align="left" scope="col" bgcolor="#CCCCCC"><font face="Tahoma, Geneva, sans-serif" size="2"><%=no_ktp%></font></td>
                     <td align="left" scope="col" bgcolor="#CCCCCC"><font face="Tahoma, Geneva, sans-serif" size="2"><%=nama%></font></td>
                     <th align="left" scope="col" bgcolor="#CCCCCC"><font face="Tahoma, Geneva, sans-serif" size="2"><%=no_telp%></font></th>
-                    <th align="Center" scope="col" bgcolor="#CCCCCC"> <input type="submit" name="select" value="Select" />  <input type="hidden" name="kodeCostumer" value="<%=kode_costumer%>" /></th> 
+                    <th align="Center" scope="col" bgcolor="#CCCCCC"> <a href="http://localhost:8080/Penjualan/CostumerController?kodeSelected=<%=kode_costumer%>">Select</a></th> 
                 </tr>
               
                    

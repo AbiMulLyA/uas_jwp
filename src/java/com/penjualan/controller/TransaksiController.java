@@ -54,7 +54,7 @@ public class TransaksiController extends HttpServlet {
                     request.setAttribute("harga", transaksi.getHarga());
                     request.setAttribute("tanggal_pembelian", transaksi.getTanggal_pembelian());
                     request.setAttribute("status", transaksi.getStatus());
-                    request.setAttribute("pesan", "berhasil di cari");
+                    request.setAttribute("pesan", "Berhasil di cari");
                }else{
                    request.setAttribute("id", kode_transaksi);
                    request.setAttribute("pesan", "Data Tidak Ditemukan");
@@ -63,7 +63,7 @@ public class TransaksiController extends HttpServlet {
                 rd.forward(request, response);
            }else if(request.getParameter("simpan") != null){
                transaksiDao.simpan(transaksi);
-               request.setAttribute("pesan", "berhasil di input");
+               request.setAttribute("pesan", "Berhasil di input");
                rd = request.getRequestDispatcher("index.jsp?go=Transaksi");
                rd.forward(request, response);
            }else if(request.getParameter("ubah") != null){
@@ -73,12 +73,12 @@ public class TransaksiController extends HttpServlet {
                    transaksi.setNama_costumer(costumerHidden);
                }
                transaksiDao.ubah(transaksi);
-               request.setAttribute("pesan", "berhasil di Ubah");
+               request.setAttribute("pesan", "Berhasil di Ubah");
                rd = request.getRequestDispatcher("index.jsp?go=Transaksi");
                rd.forward(request, response);
            }else if(request.getParameter("hapus") != null){
                transaksiDao.hapus(transaksi);
-               request.setAttribute("pesan", "berhasil di Hapus");
+               request.setAttribute("pesan", "Berhasil di Hapus");
                rd = request.getRequestDispatcher("index.jsp?go=Transaksi");
                rd.forward(request, response);
            }else if(request.getParameter("kodeSelected") != null){
@@ -92,7 +92,7 @@ public class TransaksiController extends HttpServlet {
                     request.setAttribute("harga", transaksi.getHarga());
                     request.setAttribute("tanggal_pembelian", transaksi.getTanggal_pembelian());
                     request.setAttribute("status", transaksi.getStatus());
-                    request.setAttribute("pesan", "berhasil di cari");
+                    request.setAttribute("pesan", "Berhasil di cari");
                }else{
                    request.setAttribute("id", kode_transaksi);
                    request.setAttribute("pesan", "Data Tidak Ditemukan");
